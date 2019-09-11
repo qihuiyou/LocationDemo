@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_search_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ccffffff"
+    android:visibility="visible">
+
+
+    <com.qhy.demo.widget.ShadowContainer
+        android:id="@+id/sc_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="5dp"
+        app:containerCornerRadius="8dp"
+        app:containerDeltaLength="8dp"
+        app:containerShadowColor="#d2d2d2"
+        app:containerShadowRadius="8dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_6dp_ffffff">
+
+
+            <ImageView
+                android:id="@+id/iv_search_back"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:padding="15dp"
+                android:src="@mipmap/icon_left_back" />
+
+
+            <TextView
+                android:id="@+id/tv_search"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:text="搜索"
+                android:textSize="15sp" />
+
+
+            <android.support.v7.widget.SearchView
+                android:id="@+id/keyWord"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_toLeftOf="@id/tv_search"
+                android:layout_toRightOf="@id/iv_search_back"
+                android:imeOptions="actionSearch"
+                android:inputType="textCapWords"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                app:searchIcon="@null" />
+
+
+        </RelativeLayout>
+
+
+    </com.qhy.demo.widget.ShadowContainer>
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sc_search"
+        android:scrollbars="none">
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"
+            android:layout_marginBottom="50dp"
+            app:cardCornerRadius="6dp">
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sc_search"
+                android:background="@drawable/bg_6dp_ffffff">
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycle_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none">
+
+
+                </android.support.v7.widget.RecyclerView>
+
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</RelativeLayout>

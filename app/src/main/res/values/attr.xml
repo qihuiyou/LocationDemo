@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+
+    <declare-styleable name="LoadingView">
+
+        <attr name="loadingText" format="string" />
+        <attr name="loadingTextAppearance" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="ConvenientBanner">
+        <attr name="canLoop" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="UpDownViewSwitcher">
+        <attr name="up_to_down" format="boolean" />
+        <attr name="animator_duration" format="integer" />
+        <attr name="switch_duration" format="integer" />
+        <attr name="animator_translate_distance" format="dimension" />
+    </declare-styleable>
+
+
+
+    <declare-styleable name="GifView">
+        <attr name="gif" format="reference" />
+        <attr name="paused" format="boolean" />
+    </declare-styleable>
+
+
+    <declare-styleable name="ShadowContainer">
+        <!--设置阴影颜色-->
+        <attr name="containerShadowColor" format="color"/>
+        <!--设置阴影的扩展距离-->
+        <attr name="containerShadowRadius" format="dimension"/>
+        <!--设置子View到ShadowContainer的距离-->
+        <attr name="containerDeltaLength" format="dimension"/>
+        <!--设置子View背景的圆角大小-->
+        <attr name="containerCornerRadius" format="dimension"/>
+        <!--设置阴影向下移动距离-->
+        <attr name="deltaX" format="dimension"/>
+        <!--设置阴影在Y轴移动距离-->
+        <attr name="deltaY" format="dimension"/>
+        <attr name="enable" format="boolean"/>
+    </declare-styleable>
+
+
+</resources>

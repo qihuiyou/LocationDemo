@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+    <ImageView
+        android:id="@+id/iv_login_close"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:padding="17dp"
+        android:src="@mipmap/ic_close_reg" />
+
+
+    <TextView
+        android:id="@+id/tv_not_paw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_login_close"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="50dp"
+        android:text="免密登录"
+        android:textColor="@color/black"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/tv_not_agreement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_not_paw"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:text="登录表示同意'用户协议'和'隐私政策'"
+        android:textColor="#777777"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/tv_login_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_not_paw"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        android:layout_toRightOf="@id/tv_not_agreement"
+        android:drawableLeft="@mipmap/icon_card_edit"
+        android:text="修改"
+        android:textColor="#555555"
+        android:textSize="13sp" />
+
+
+    <LinearLayout
+        android:id="@+id/ll_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_not_agreement"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:id="@+id/rl_login_phone"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:visibility="visible">
+
+
+            <TextView
+                android:id="@+id/tv_login_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="+86"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+
+            <EditText
+                android:id="@+id/et_login_phone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/tv_login_number"
+                android:background="@null"
+                android:hint="手机号"
+                android:inputType="phone"
+                android:maxLength="13"
+                android:textSize="22sp" />
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_login_code"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="50dp">
+
+
+            <TextView
+                android:id="@+id/tv_login_code_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="重新获取(59s)"
+                android:textSize="13sp" />
+
+
+            <EditText
+                android:id="@+id/et_login_code"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@id/tv_login_code_time"
+                android:background="@null"
+                android:inputType="phone"
+                android:maxLength="4"
+                android:textSize="22sp" />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/ll_input"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="#dddddd" />
+
+
+    <TextView
+        android:id="@+id/tv_login_next"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/view_line"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/bg_gray_circle"
+        android:gravity="center"
+        android:text="-->"
+        android:textColor="@color/white"
+        android:textSize="22sp" />
+
+
+    <RelativeLayout
+        android:id="@+id/rl_login_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <ImageView
+            android:id="@+id/iv_wechat"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:src="@mipmap/ic_weixin_login" />
+
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_toRightOf="@id/iv_wechat"
+            android:src="@mipmap/ic_weixin_login" />
+
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_toLeftOf="@id/iv_wechat"
+            android:src="@mipmap/ic_weixin_login" />
+
+
+        <TextView
+            android:id="@+id/tv_login_paw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_wechat"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="   ·   密码登录   ·   "
+            android:textColor="@color/black"
+            android:textSize="13sp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_wechat"
+            android:layout_marginTop="20dp"
+            android:layout_toLeftOf="@id/tv_login_paw"
+            android:text="账号注册"
+            android:textColor="@color/black"
+            android:textSize="13sp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_wechat"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@id/tv_login_paw"
+            android:text="隐私设置"
+            android:textColor="@color/black"
+            android:textSize="13sp" />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
